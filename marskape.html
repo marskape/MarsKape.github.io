@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Mars Kape</title>
+     <link rel="stylesheet" href="marskapestyle.css">
+     <link href="https://fontawesome.com/icons/bars?f=classic&s=solid&pc=%23ffffff" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="javascript">
+     <link rel="logo icon" type="logo" href="mars no background.png" />
+     <!---CSS Bootstrap-->
+     <link rel="stylesheet" href="bootstrap.css">
+
+</head>
+<body>
+     <!--Spinner connected to CSS-->
+ <div class="loader">
+          <div></div>
+ </div>
+     <!--Navigation-->
+     <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+               <a class="navbar-brand" href="marskape.html">
+                    <img src="logo.png" width="100px" class="logo" alt="Mars Kape Logo"></a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class= "navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                         <li class="nav-item">
+                              <a class="nav-link" href="marskape.html">HOME</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="menu.html" >MENU</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="location.html" >LOCATION</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="contact.html">CONTACTS</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="feedback.html">FEEDBACK</a>
+                         </li>
+                    </ul>
+               </div>
+               </div>
+          </div>
+     </nav>
+     <!--content-->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+                    <hr style="width: 105%; color: white; border: 2px solid white; margin-left: -2.5%; margin-right: -2%;margin-top: -0.9%">
+                    <div class="center-content">
+                    <h1 style="color: white; font-family:'Montserrat'; font-size: 100px; margin-top: -5%;margin-bottom: -2%;">MARS KAPE</h1>
+                    </div>
+                    <br>
+                    <p>
+                        Mars Kape is an industrial-chic-themed coffee shop with a minimalist ambiance. In addition to supporting<br> local coffee farmers, we serve the best coffee in Trece Martirez City, Cavite, which provides cheap premium<br> coffee. Mars Kape started brewing in 2021 and continues to deliver the best coffee you've ever tasted.
+                    </p>
+                    <br>
+                    <div class="hours">
+                       <h3>Store Hours</h3>
+                       <p>Mon - Sat</p>
+                    </div>
+                    <div class="time">
+                       <h4>1:00pm to 8:00pm</h4>
+                    </div>
+                    <br>
+                    
+                    <div class="button" style="display: flex; justify-content: center; align-items: center; margin-top: -10px;">
+                    <button class="bttn1">
+                         <a href="menu.html">Get Started</a>
+                    </button>
+                    </div>
+                    <div class="clearer"></div>
+               </div>
+          </div>
+     </div>
+<!--JS Bootstrap-->
+     <script src="bootstrap.js"></script>
+     <script src="jquery-3.7.0.min.js"></script>
+<!--spinner script-->
+    <script>
+                    $(window).on('load',function(){
+                         $(".loader").fadeOut(2000);
+                         $(".content").fadeIn(1000)
+                    });
+      </script>
+</body>
+</html>

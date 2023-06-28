@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Mars Kape</title>
+     <link rel="stylesheet" href="locationstyle.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;500;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;500;700;800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+     <!---CSS Bootstrap-->
+     <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body style="background-color: #DEDEDE; background-attachment: fixed;">
+  <!--Spinner connected to CSS-->
+     <div class="loader">
+          <div></div>
+     </div>
+     <!--Navigation-->
+     <nav class="navbar navbar-expand-sm navbar-light bg-transparent">
+          <div class="container">
+               <a class="navbar-brand" href="marskape.html" style="font-family: 'Montserrat';">
+                    <img src="logo2.png" width="100px" class="logo">
+               </a>
+               <button class="navbar-toggler" style="margin-left:85%; margin-top: -15%;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                     <li class="nav-item"><a class="nav-link" href="marskape.html">HOME</a></li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="menu.html" >MENU</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="location.html">LOCATION</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="contact.html">CONTACTS</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="feedback.html">FEEDBACK</a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+     </nav>
+     <hr style="width: 95%; height:20%; color:  black; border: 2px solid black; margin-left: 2%;margin-right: -4%; margin-top: -2%;">
+     <section class="location" id="location">
+         <div class="container">
+             <div class="row">
+               <!-- Left side column -->
+                 <div class="col-sm-6">
+                    <h1>OUR LOCATION:</h1>
+                     <br>
+                     <div class="contact-link">
+                       <a href="https://goo.gl/maps/6z21t2QCJau7tw9w7"> Blk 03 Lot 55 Southville 2 Phase 1-A Brgy. Inocencio, Trece Martires City, Cavite Philippines</a>
+                       </div>
+                 </div>
+                 
+                 <!-- Right side column -->
+                <div class="col-sm-6">
+                <div class="link">
+                    <a href="https://goo.gl/maps/6z21t2QCJau7tw9w7"><img src="location.jpg" alt="Image" class="img-fluid"></a>
+                    </div>
+                  </div>
+                </div>
+             </div>
+     </section>
+
+<!--JS Bootstrap-->
+<script src="bootstrap.js"></script>
+<script src="jquery-3.7.0.min.js"></script>
+<!--spinner script-->
+    <script>
+     $(window).on('load',function(){
+          $(".loader").fadeOut(1000);
+          $(".content").fadeIn(100)
+     });
+     </script>
+</body>
+</html>

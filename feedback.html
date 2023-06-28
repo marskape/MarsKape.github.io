@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Mars Kape</title>
+     <link rel="stylesheet" href="feedbackstyle.css">
+     <link rel="logo icon" type="logo" href="mars no background.png" />
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+     <link href="https://mail.google.com/mail/u/4/#inbox" rel="stylesheet">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body style="background-color: #DEDEDE; background-attachment: fixed;">
+    <!--Spinner connected to CSS-->
+     <div class="loader">
+      <div></div>
+     </div>
+          <!--Navigation-->
+                    <nav class="navbar navbar-expand-lg navbar-light bg-tranaparent">
+                         <div class="container">
+                              <a class="navbar-brand" href="marskape.html">
+                                   <img src="logo2.png" width="100px" class="logo" alt="Mars Kape">
+                              </a>
+                              <button class="navbar-toggler" style="color: black; margin-left:85%; margin-top: -15%;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                   <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarNav">
+                                   <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="marskape.html">HOME</a>
+                                        </li>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="menu.html">MENU</a>
+                                        </li>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="location.html">LOCATION</a>
+                                        </li>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="contact.html">CONTACTS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="feedback.html">FEEDBACK</a>
+                                        </li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </nav>
+               </div>
+          </div>
+           <!--Content-->
+          <hr style="width: 95%; color:  black; border: 2px solid black; margin-left: 2%;margin-right: -4%; margin-top: -2%;">
+          <div class="container-fluid">
+          <div class="row ">
+               <div class="col-12">
+                    <div class="container">
+                         <form name="submit-to-google-sheet">
+                              <h3>Please let us know your thoughts.</h3>
+                              <input name="Name" type="text" autocomplete="off" placeholder="Name" required oninvalid="this.setCustomValidity('Please Enter Your Name')" oninput="this.setCustomValidity('')">
+                              <input name="Email" type="Email" autocomplete="off" placeholder="Email" required oninvalid="this.setCustomValidity('Please Enter Email Address')" oninput="this.setCustomValidity('')">
+                           <textarea name="Feedback" autocomplete="off" placeholder="Send us feedback." rows="4" required oninvalid="this.setCustomValidity('Please Enter Your Feedback')" oninput="this.setCustomValidity('')"></textarea>
+                              <button type="submit" name="myButton" required>Send</button>
+                              <span id="msg"></span>
+                         </form>
+                    </div>
+               </div>
+          </div>
+          <!--Script connected to Exel file-->
+          <script>
+               const scriptURL = 'https://script.google.com/macros/s/AKfycbySWDFgQSPNqDED56gny2LjJWeU1in1uH7YYsQGDMMs57bPB6jIGbH3E9JJqpYy81Yp/exec'
+               const form = document.forms['submit-to-google-sheet']
+               const msg = document.getElementById('msg')
+
+               form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    alert('Your message has been sent successfully!')
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                         .then(response => {
+                              msg.innerHTML = "Thank you for your message!"
+                              setTimeout(function() {
+                                   msg.innerHTML = ""
+                              }, 5000)
+                              form.reset()
+                         })
+                         .catch(error => console.error('Error!', error.message))
+               })
+          </script>
+
+          <footer class="footer">
+               <p> © COPYRIGHT DESIGNED BY BSIT 1-6 2023</p>
+          </footer>
+     </div>
+     
+     <!-- Bootstrap JS -->
+     <script src="bootstrap.js"></script>
+     <script src="jquery-3.7.0.min.js"></script>
+     <!-- Spinner script -->
+     <script>
+          $(window).on('load',function(){
+         $(".loader").fadeOut(1500);
+         $(".content").fadeIn(1000)
+    });
+      </script>
+</body>
+</html>
+
+                              
+                              

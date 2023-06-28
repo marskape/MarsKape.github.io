@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image:url(bgcover.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    object-position: 0 -8px;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    margin-left: -30%;
+    margin-top: -13%;
+    width: 90%;
+    display:block;
+}
+.navbar-toggler {
+    color: white;
+    margin-top: -15%;
+    margin-left: 80%;
+}
+.fa-solid-fa-bars{
+    color: white;
+}
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    margin-top: -2%;
+  }
+.nav-item li {
+    list-style: none;
+    display: inline-block;
+    font-weight: 300px;
+    font-family: 'Montserrat';
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 30px;
+    font-stretch: expanded;
+}
+li a:hover {
+    color: white;
+    padding: 1px 1px;
+    border: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    font-display: block;
+}
+.title {
+    color: white;
+    text-align: center;
+    font-size: 210px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-top: 140px;
+    margin-right: 10%;
+    margin-left: 150px;
+
+}
+p{
+    font-family: 'Arial';
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 1.5;
+}
+.hours h3{
+    font-family: 'Arial';
+    font-size: 30px;
+    color: rgb(255, 253, 253);
+    text-align: center;
+    font-weight: 100;
+    margin-top: -2%;
+    margin-bottom: -1%;
+}
+.hours p{
+  font-family: 'Arial';
+  font-size:20px;
+  color: rgb(255, 253, 253);
+  text-align: center;
+  font-weight: 100;
+  line-height: 1.6;
+  margin-top: 1%;
+
+}
+.time h4{
+    font-family: 'Arial';
+    color: rgb(255, 253, 253);
+    text-align: center;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 1.6;
+    margin-top: -0.9%;
+}
+.bttn1 {
+  list-style: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bttn1 a{
+  text-decoration: none;
+  font-family: 'Montserrat';
+  color:white;
+  border: white 2px solid;
+  font-style: inherit;
+  font-size: 20px;
+  font-weight: 100px;
+  background-color: transparent;
+  padding: 12px 28px;
+}
+.center-content {
+    margin-top: 10%;
+    text-align: center;
+}
+.loader{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #16191e;
+  position: absolute;
+}
+.loader>div{
+  height: 50px;
+  width: 50px;
+  border: 5px solid#45474b;
+  border-top-color: #593C1f;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+  100%{
+      transform:  rotate(360deg);
+  }
+}
